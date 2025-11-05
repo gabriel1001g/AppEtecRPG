@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
+using AppRpgEtec.Models;
 using Newtonsoft.Json;
 
 namespace AppRpgEtec.Services
@@ -94,5 +95,9 @@ namespace AppRpgEtec.Services
                 throw new Exception(serialized);
         }
 
+        internal async Task<int> PutAsync(object value, Usuario u, string token)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
