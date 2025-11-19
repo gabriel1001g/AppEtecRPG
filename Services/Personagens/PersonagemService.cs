@@ -53,6 +53,15 @@ namespace AppRpgEtec.Services.Personagens
             return result;
         }
 
+        public async Task<ObservableCollection<Personagem>> GetByNomeAproximadoAsync(string busca)
+        {
+            string urlComplementar = $"/GetbyNomeAproximado/{busca}";
+            ObservableCollection<Models.Personagem> listaPersonagens = await _request.GetAsync<ObservableCollection<Models.Personagem>>
+                (_apiUrlBase + urlComplementar, _token);
+
+            return listaPersonagens;
+        }
+
 
     }
 
